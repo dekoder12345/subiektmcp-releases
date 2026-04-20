@@ -1,6 +1,6 @@
 # SubiektMCP — MCP Server for Subiekt GT (Polish ERP)
 
-> **Connect Claude Desktop, ChatGPT, Cursor, Windsurf, n8n and any MCP-compatible AI agent to your Subiekt GT ERP database.**
+> **Connect Claude Desktop to your Subiekt GT ERP database.**
 
 [![License](https://img.shields.io/badge/license-Commercial-blue)](https://subiektgt.chat/regulamin)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2B-lightgrey)]()
@@ -44,7 +44,7 @@ SubiektMCP is a production-ready **Model Context Protocol (MCP) server** for **S
 
 ### 🔒 Privacy by design
 - **Your ERP data never leaves your computer.** The MCP server runs locally as a Windows service.
-- AI agents (Claude, ChatGPT) communicate directly with your local server over MCP — nothing is routed through our infrastructure.
+- Claude Desktop communicates directly with your local server over MCP — nothing is routed through our infrastructure.
 - License verification is the only outbound call (to Keygen.sh, once per hour with local cache).
 
 ### 🛠️ Technical requirements
@@ -56,18 +56,13 @@ SubiektMCP is a production-ready **Model Context Protocol (MCP) server** for **S
 
 ---
 
-## 🤖 Supported AI agents
+## 🤖 Supported AI agent
 
 | AI agent | Status | How to connect |
 |---|---|---|
 | **Claude Desktop** | ✅ Native | Auto-configured by installer |
-| **Claude.ai** (web) | ⚠️ | Requires tunneling (ngrok, Cloudflare Tunnel) |
-| **ChatGPT Desktop** | ✅ | Via Custom GPT with MCP connector |
-| **Cursor** | ✅ | `~/.cursor/mcp.json` with `mcp-remote` bridge |
-| **Windsurf** | ✅ | Config → Add MCP Server |
-| **n8n** | ✅ | MCP node → point to `http://localhost:8000/mcp` |
-| **Anthropic Agent SDK** | ✅ | `from claude_agent_sdk import MCPClient` |
-| **Any MCP-compatible client** | ✅ | HTTP Streamable transport on `:8000/mcp` |
+
+SubiektMCP is officially tested and supported with **Claude Desktop** only. We focus on a single, production-quality integration rather than broad but shallow support.
 
 ---
 
@@ -102,7 +97,7 @@ Open Claude Desktop and ask:
 
 ```
 ┌─────────────────────────────────────┐
-│  AI Agent (Claude / ChatGPT / ...)  │
+│  Claude Desktop                     │
 └─────────────────┬───────────────────┘
                   │  MCP Protocol (HTTP Streamable / STDIO)
                   ▼
@@ -202,6 +197,6 @@ This software is commercial and requires a valid license key to run. See `LICENS
 
 ## 🔑 Keywords
 
-`mcp` `model-context-protocol` `subiekt-gt` `subiekt` `polish-erp` `erp-integration` `insert-gt` `sfera-gt` `claude` `anthropic-claude` `claude-desktop` `chatgpt` `cursor-ide` `windsurf` `n8n` `ai-agents` `llm-tools` `windows-service` `saas` `commercial-software` `poland-it` `mssql` `pyodbc` `fastmcp` `python-mcp` `ai-erp` `invoice-api` `inventory-api` `crm-integration`
+`mcp` `model-context-protocol` `subiekt-gt` `subiekt` `polish-erp` `erp-integration` `insert-gt` `sfera-gt` `claude` `anthropic-claude` `claude-desktop` `ai-agents` `llm-tools` `windows-service` `saas` `commercial-software` `poland-it` `mssql` `pyodbc` `fastmcp` `python-mcp` `ai-erp` `invoice-api` `inventory-api` `crm-integration`
 
-**Szukasz integracji Subiekta GT z AI? SubiektMCP to serwer MCP, który łączy Twojego Subiekta z Claude, ChatGPT i innymi agentami AI. Działa na Windows, zgodny z RODO, stworzony w Polsce. Kup licencję: [subiektgt.chat](https://subiektgt.chat?utm_source=github_readme_keywords).**
+**Szukasz integracji Subiekta GT z Claude Desktop? SubiektMCP to serwer MCP, który łączy Twojego Subiekta z Claude Desktop. Działa na Windows, zgodny z RODO, stworzony w Polsce. Kup licencję: [subiektgt.chat](https://subiektgt.chat?utm_source=github_readme_keywords).**
